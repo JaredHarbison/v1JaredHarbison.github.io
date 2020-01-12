@@ -1,0 +1,53 @@
+/*////////////////////////////////////////////////////////////////////
+////////// Royal Ontario Museum image layers /////////////////////////
+////////////////////////////////////////////////////////////////////*/
+.background-rom-and-moon {
+    background-image: url(../../Assets/Images/rom-and-moon.png);
+    position: fixed; z-index: -1000;}
+  .background-rom-cutout {
+    background-image: url(../../Assets/Images/rom-cutout-downside.png);
+    position: fixed; z-index: -100;}
+  .background-upsidedown-rom-cutout {
+    background-image: url(../../Assets/Images/rom-cutout-upside.png);
+    opacity:.75; position: absolute; z-index: -500;}
+  .background-rom-and-moon, 
+  .background-rom-cutout,
+  .background-upsidedown-rom-cutout {
+    height: 100%; width: 100%; top: 0px; left: 0px;
+    background-attachment: absolute;
+    background-color: transparent;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;}
+  @media only screen and (orientation: portrait) {
+    .background-rom-and-moon {background-position: center;};
+    .background-rom-cutout {background-position: center;};}
+  @media only screen and (orientation: landscape) {
+    .background-rom-and-moon {background-position-y: 33%};
+    .background-rom-cutout {background-position-y: 33%};
+    .background-upsidedown-rom-cutout {height: 170%; top: -10%};}
+  /*////////////////////////////////////////////////////////////////////
+  ////////// gradient layers ///////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////*/
+  .top-gradiated-background-layer {
+    background-image: linear-gradient( 
+      to top, rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,.25));
+    position: fixed; z-index: -600;
+    height: 100%; width: 100%;}
+  .middle-gradiated-background-layer {
+    background-image: linear-gradient( 
+      to bottom, rgba(0,0,0,0), rgba(0,0,0,.9), rgba(0,0,0,0));
+    position: fixed; z-index: -200;
+    height: 100%; width: 100%;}
+  .bottom-gradiated-background-layer {
+    background-image: linear-gradient( 
+      to bottom, rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,.75));
+    position: fixed; z-index: 100;
+    height: 100%; width: 100%;}
+  @media only screen and (orientation: portrait) {
+    .middle-gradiated-background-layer {background-position: center;};}
+  @media only screen and (orientation: landscape) {
+    .middle-gradiated-background-layer {
+        background-image: linear-gradient( 
+          to bottom, rgba(0,0,0,0.5), 33%, rgba(0,0,0,.75), 66%, rgba(0,0,0,1));};}
+  

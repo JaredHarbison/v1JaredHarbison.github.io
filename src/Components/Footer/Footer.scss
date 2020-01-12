@@ -1,0 +1,15 @@
+.footer {
+    display: flex; 
+    justify-content: center; 
+    position: relative; 
+    z-index: 250; 
+    background-color: black; 
+    text-shadow: -5px 5px 5px dark;
+    h1 {
+      color: white; 
+      text-align: left;
+      padding-left: 5vw;}
+    a {
+      color: white; 
+      padding-left: 2.5vw;}
+  }
